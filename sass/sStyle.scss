@@ -1,0 +1,526 @@
+@import "_settings";
+@import "_default";
+@import "_mixins";
+// mainHeader-header
+.mainHeader-header {
+  box-shadow: $boxShadow;
+}
+.mainHeader {
+  min-height: 100vh;
+  overflow: hidden;
+}
+//top header section
+.mainHeader-topList {
+  display: flex;
+  padding: 0rem 1rem;
+  font-size: 12px;
+}
+
+.topList-item {
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-right: 1px solid colors(gray);
+  }
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6) {
+    border-left: 1px solid colors(gray);
+  }
+  &:nth-child(4) {
+    margin-left: auto;
+  }
+
+  padding: 1rem 1rem;
+
+  select {
+    @include selectBox(none, none, colors(gray), pointer);
+  }
+}
+//end top header section
+//bottom header section
+.hamburger-btn{
+  width: 40px;
+  border: 1px solid colors(red);
+  border-radius: 5px;
+  height:40px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+  @media (max-width:780px){
+    display: flex;
+  }
+  &.active{
+    .hamburger-midLine::after{top: 0; transform: rotate(90deg); transition: .2s ease;}
+    .hamburger-midLine::before{top: 0;  display: none;}
+    .hamburger-midLine{
+     
+      transform: rotate(45deg); 
+      transition: 0.2s  ease  ;
+    }
+  }
+  .hamburger-midLine::after{
+    content: "";
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    background-color: colors(red);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 6px;
+  }
+  .hamburger-midLine::before{
+    content: "";
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    background-color: colors(red);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -6px;
+  }
+  .hamburger-midLine{
+    position: relative;
+    width: 60%;
+    height: 3px;
+   border-radius: 5px;
+    background-color: colors(red);
+    
+
+  }
+}
+
+.mainHeader-bottomNav {
+  padding: 1.5rem 0;
+  border-top: 1px solid colors(gray);
+  position: relative;
+}
+.bottomNav-brand {
+  font-weight: bolder;
+  font-size: 1.3rem; 
+}
+.bottomNav-list {
+  background-color: colors(white);
+  display: flex;
+  @media (max-width:780px) {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    &.toggled{
+      transition: 0.2s ease;
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      
+      z-index: 99;
+    
+      .bottomNav-listItem{
+        margin-bottom: 1rem;
+      }
+      
+    }
+  }
+ 
+}
+.bottomNav-listContainer {
+ 
+  margin-left: auto;
+}
+.bottomNav-listItem {
+  padding: 0 1rem;
+}
+//end bottom header section
+// stying mainHeader-main
+.mainHeader-form {
+  .input-group-text {
+    background: none;
+    border: none;
+  }
+  .form-control {
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+.mainHeader-form {
+  width: 100%;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+  @media (max-width: 817px) {
+    margin-top: 0.5rem;
+    flex-direction: column;
+  }
+  display: flex;
+  justify-content: center;
+
+  .form-control {
+    padding: 1.3rem 0;
+  }
+  button {
+    @extend %my-btn;
+    padding: btn-sizes(lg);
+    background-color: colors(red);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 2rem;
+    @media (max-width: 817px) {
+      margin-left: 0;
+    }
+    i {
+      font-size: 0.8rem;
+    }
+    &:hover {
+      background-color: colors(darkRed);
+    }
+  }
+  div {
+    background-color: colors(white);
+    padding: 0 2rem;
+    width: 90%;
+    min-width: 90%;
+    @media (max-width: 817px) {
+      width: auto;
+    }
+    i,
+    label {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: colors(darkGray);
+    }
+    i {
+      &:nth-child(3) {
+        border-right: 1px solid colors(gray);
+        @media (max-width: 817px) {
+          border: none;
+        }
+      }
+    }
+  }
+}
+.mainHeader-main {
+  min-height: 100vh;
+  background-image: url(../images/welcome-hero/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: colors(white);
+  position: relative;
+  z-index: 1;
+  padding-top: 10rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors(darkGray);
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  > .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+}
+.mainHeader-content {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+//end stying mainHeader-main
+//stying main section, home
+.home {
+  position: relative;
+  top: -4em;
+  z-index: z-index(justTop);
+  @media (max-width: 838px) {
+    top: 0;
+    padding: 5rem 0;
+  }
+
+  > .container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  i {
+    font-size: 2.8rem;
+  }
+}
+//end stying main section, home
+// stying main section, works
+.works {
+  padding-bottom: 5rem;
+  .container {
+    gap: 1rem;
+  }
+  .my-card {
+    &:hover {
+      background-color: colors(red);
+      color: colors(white);
+      .icon-wraper {
+        background-color: colors(white);
+      }
+      .myCard-title {
+        color: colors(white);
+      }
+      button {
+        background-color: colors(white);
+      }
+    }
+    padding: 3.1rem 2.6rem;
+    button {
+      @extend %my-btn;
+      padding: btn-sizes(sm);
+      border: 1px solid colors(lightGray);
+      font-size: 0.8rem;
+      color: colors(darkGray);
+    }
+    .icon-wraper {
+      margin-bottom: 2rem;
+      width: 100px;
+      height: 100px;
+      background-color: colors(lightGray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: colors(darkGray);
+    }
+    .myCard-title {
+      color: colors(darkGray);
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+    .myCard-subtitle {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  }
+}
+.works-header {
+  @include centerSecHeaders();
+}
+
+//end stying main section, works
+// stying main section, explore
+.explore {
+  .container {
+    gap: 1rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    @media (max-width: 1071px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @media (max-width: 719px) {
+      grid-template-columns: 1fr;
+      // grid-template-rows: repeat(2, 1fr);
+    }
+  }
+}
+.explore-content {
+  .my-card {
+    padding: 0;
+    &:hover {
+      .supCard-onHover {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+}
+
+.card-about {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.813rem;
+  p {
+    margin: 0;
+  }
+}
+.card-footer {
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  li {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+  i {
+    font-size: 0.8rem;
+  }
+}
+.card-rating {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: colors(darkGray);
+  min-height: 2rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0.7rem;
+  .cardRating-rate {
+    color: colors(white);
+    background-color: colors(primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+.explore {
+  padding: 5rem 0;
+  background-color: colors(exploreBack);
+}
+.explore-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.explore-cardTitle {
+  color: colors(lightBlack);
+  font-weight: 600;
+  margin: 0;
+}
+.card-imgWraper {
+  position: relative;
+
+  .supCard-onHover {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translatey(100%);
+    opacity: 0;
+    transition: 0.3s ease;
+    padding-bottom: 1rem;
+  }
+
+  .onHover-item:nth-child(2) {
+    margin-left: auto;
+    margin-right: 1rem;
+    @extend %onHover-badge;
+  }
+  .onHover-item:nth-child(3) {
+    @extend %onHover-badge;
+  }
+  .onHover-item:nth-child(1) {
+    background-color: colors(red);
+    border-radius: 5px;
+    padding: 0.3rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+//end stying main section, explore
+// stying main section, reviews
+.reviews-topContent{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+ 
+}
+.reviews-content{
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  
+}
+.reviews-heading{
+  margin-bottom: 4rem;
+}
+.reviews{
+  padding: 5rem 0;
+  .container{
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .my-card{
+    padding: 3.125rem 1.875rem;
+    min-width: 300px;
+   
+  }
+}
+.reviews-author{
+  padding-left: 1rem;
+  h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: colors(darkGray);
+    margin-bottom: .2rem;
+   
+  }
+  p{
+     font-size:.9rem ;
+     margin-bottom: .9rem;
+     color: colors(darkGray);
+     margin-bottom: .2rem;
+  }
+  ul{
+    li:nth-child(even){
+      margin: 0 .3rem;
+    }
+    
+  }
+}
+.reviews-rate{
+  display: flex;
+  color: yellow;
+}
+.myCard-content{
+  >p{
+    margin-bottom: 0;
+    font-size: .9rem;
+    color: colors(darkGray);
+  }
+}
+
+//end stying main section, reviews

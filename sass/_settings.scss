@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Poppins:wght@300;700&display=swap");
+@import "_mixins";
+
+$colors: (
+  red: #ff545a,
+  darkRed: #f43032,
+  gray: #859098,
+  darkGray: #505866,
+  white: #fff,
+  lightGray: #eef2f6,
+  primary: #70a9ff,
+  success: #00c61c,
+  warning: #ffcc5d,
+  danger: #ffcc5d,
+  purple: #bd70ff,
+  lightBlack: #343a3f,
+  exploreBack: rgba(133, 145, 153, 0.039),
+);
+$btn-size: (
+  lg: 1rem 4rem,
+  sm: 0.5rem 1rem,
+);
+$boxShadow: 0px 0px 6px
+  map-get(
+    $map: $colors,
+    $key: gray,
+  );
+.highlight {
+  color: map-get($colors, darkRed);
+}
+$zIndex: (
+  justTop: 40,
+  nav: 50,
+  modal: 60,
+);
+@function z-index($index) {
+  @return map-get($zIndex, $index);
+}
+@function colors($key) {
+  @return map-get($colors, $key);
+}
+@function btn-sizes($key) {
+  @return map-get($map: $btn-size, $key: $key);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+%my-btn {
+  background: none;
+  border: none;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+.myCard-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.myCard-subtitle {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+.sections-header {
+  color: colors(darkGray);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.sections-subHeader {
+  color: colors(gray);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.my-card {
+  @include card(
+    200px,
+    1rem 2rem,
+    1px solid transparent,
+    5px,
+    $boxShadow,
+    white,
+    0.3s ease,
+    380px
+  );
+}
+.border-bar {
+  width: 1px;
+  height: 1.5rem;
+  background-color: colors(gray);
+}
+.group-breaker {
+  display: none;
+  @media (max-width: 817px) {
+    display: block;
+  }
+}
+%onHover-badge {
+  padding: 0.3rem 0.5rem;
+  background-color: black;
+  border-radius: 5px;
+}

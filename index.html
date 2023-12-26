@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="arshiya" />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="project listrace" />
+    <meta name="description" content="first sass project" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ar.project listrace</title>
+  </head>
+  <body>
+    <header class="mainHeader">
+      <header class="mainHeader-header">
+        <nav class="mainHeader-nav">
+          <div class="mainHeader-topNav">
+            <ul class="mainHeader-topList">
+              <li class="topList-item">
+                <a href="#"
+                  ><select name="region" id="region" title="choose you're city">
+                    <option value="en">en</option>
+                    <option value="ir">ir</option>
+                    <option value="us">us</option>
+                  </select></a
+                >
+              </li>
+              <li class="topList-item">
+                <a href="#"
+                  ><select
+                    name="currency"
+                    id="currency"
+                    title="choose you're currency"
+                  >
+                    <option value="euro">euro</option>
+                    <option value="usd">usd</option>
+                  </select></a
+                >
+              </li>
+              <li class="topList-item">
+                <a href="#">
+                  <i class="bi bi-search"></i>
+                </a>
+              </li>
+              <li class="topList-item">
+                <a href="#"> +1 222 777 6565 </a>
+              </li>
+              <li class="topList-item">
+                <a href="#"> sign up </a>
+              </li>
+              <li class="topList-item">
+                <a href="#"> register </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mainHeader-bottomNav">
+            <div class="container">
+              <div class="bottomNav-brand">
+                List<span class="highlight">Race</span>
+              </div>
+              <div class="bottomNav-listContainer">
+                <ul class="bottomNav-list">
+                  <li class="bottomNav-listItem"><a href="#">HOME</a></li>
+                  <li class="bottomNav-listItem">
+                    <a href="#">HOW IT WORKS</a>
+                  </li>
+                  <li class="bottomNav-listItem"><a href="#">EXPLORE</a></li>
+                  <li class="bottomNav-listItem"><a href="#">REVIEW</a></li>
+                  <li class="bottomNav-listItem"><a href="#">BLOG</a></li>
+                  <li class="bottomNav-listItem"><a href="#">CONTACT</a></li>
+                </ul>
+                <div class="hamburger-btn"><span class="hamburger-midLine"></span></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="mainHeader-main">
+        <div class="container">
+          <div class="mainHeader-content text-center">
+            <h1 class="fw-bold mb-3">
+              BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED
+            </h1>
+            <p class="lead">
+              Find Best Place, Restaurant, Hotel, Real State and many more think
+              in just One click
+            </p>
+          </div>
+          <form action="#" method="post" class="mainHeader-form">
+            <div class="input-group">
+              <label for="place" class="input-group-text">what?</label>
+              <input type="text" class="form-control" />
+              <i class="bi bi-list-task input-group-text"></i>
+              <div class="group-breaker"></div>
+              <label for="location" class="input-group-text">location</label>
+              <input type="text" class="form-control" />
+              <i class="bi bi-crosshair2 input-group-text"></i>
+            </div>
+            <button>
+              search
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="home">
+        <div class="container">
+          <div class="my-card">
+            <div class="card-content">
+              <i class="bi bi-house-heart-fill"></i>
+              <p class="myCard-title">resturant</p>
+              <p class="myCard-subtitle">150 listings</p>
+            </div>
+          </div>
+          <div class="my-card">
+            <div class="card-content">
+              <i class="bi bi-house-heart-fill"></i>
+              <p class="myCard-title">resturant</p>
+              <p class="myCard-subtitle">150 listings</p>
+            </div>
+          </div>
+          <div class="my-card">
+            <div class="card-content">
+              <i class="bi bi-house-heart-fill"></i>
+              <p class="myCard-title">resturant</p>
+              <p class="myCard-subtitle">150 listings</p>
+            </div>
+          </div>
+          <div class="my-card">
+            <div class="card-content">
+              <i class="bi bi-house-heart-fill"></i>
+              <p class="myCard-title">resturant</p>
+              <p class="myCard-subtitle">150 listings</p>
+            </div>
+          </div>
+          <div class="my-card">
+            <div class="card-content">
+              <i class="bi bi-house-heart-fill"></i>
+              <p class="myCard-title">resturant</p>
+              <p class="myCard-subtitle">150 listings</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="works">
+        <div class="works-header">
+          <h2 class="sections-header">HOW IT WORKS</h2>
+          <p class="sections-subHeader">
+            Learn More about how our website works
+          </p>
+        </div>
+        <div class="works-content">
+          <div class="container">
+            <div class="my-card">
+              <div class="card-content">
+                <div class="icon-wraper">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <p class="myCard-title"><a href="#">Choose what to Do</a></p>
+                <p class="myCard-subtitle">
+                  Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+                  eiusmod tempor incididunt ut laboremagna aliqua.
+                </p>
+                <button>read more</button>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-content">
+                <div class="icon-wraper">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <p class="myCard-title"><a href="#">Choose what to Do</a></p>
+                <p class="myCard-subtitle">
+                  Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+                  eiusmod tempor incididunt ut laboremagna aliqua.
+                </p>
+                <button>read more</button>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-content">
+                <div class="icon-wraper">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <p class="myCard-title"><a href="#">Choose what to Do</a></p>
+                <p class="myCard-subtitle">
+                  Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+                  eiusmod tempor incididunt ut laboremagna aliqua.
+                </p>
+                <button>read more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="explore">
+        <div class="explore-header">
+          <h2 class="sections-header">EXPLORE</h2>
+          <p>Explore New place, food, culture around the world and many more</p>
+        </div>
+        <div class="explore-content">
+          <div class="container">
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="my-card">
+              <div class="card-imgWraper">
+                <img src="images/explore/e1.jpg" alt="eg" />
+                <ul class="supCard-onHover">
+                  <li class="onHover-item"><a href="#">best rated</a></li>
+                  <li class="onHover-item">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </li>
+                  <li class="onHover-item"><i class="bi bi-bookmark"></i></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <p class="explore-cardTitle">Tommy Helfinger Bar</p>
+                <div class="card-rating">
+                  <div class="cardRating-rate">5.0</div>
+                  <div class="cardRating-outOf">10 ratings</div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-price">
+                    from <span class="highlight">100$ to 500$</span>
+                  </div>
+                  <span class="border-bar"></span>
+                  <div class="cardRating-type">resturant</div>
+                </div>
+                <div class="card-about">
+                  <div>
+                    <img src="images/clients/c1.png" alt="c1" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem quasi provident ad eius laudantium recusandae qui aut
+                    eligendi. Maiores reiciendis
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <ul>
+                    <li><a href="#">close now</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-geo-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews-heading text-center">
+          <h2 class="sections-header">CLIENTS REVIEWS</h2>
+          <p class="sections-subHeader">What our client say about us</p>
+        </div>
+        <div class="reviews-content">
+            <div class="container">
+
+            
+              <div class="my-card">
+                  <div class="myCard-content">
+                    <div class="reviews-topContent">
+                        <div class="img-wraper"><img src="images/clients/c3.png" alt="author"></div>
+                        <div class="reviews-author">
+                          <h3>tom leakder</h3>
+                          <p>london, uk </p>
+                          <ul class="reviews-rate">
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi adipisci fugit voluptatibus, quidem molestiae non asperiores harum quasi atque culpa, voluptas earum delectus ex? Rem fugiat </p>
+
+                  </div>
+              </div>
+              <div class="my-card">
+                  <div class="myCard-content">
+                    <div class="reviews-topContent">
+                        <div class="img-wraper"><img src="images/clients/c3.png" alt="author"></div>
+                        <div class="reviews-author">
+                          <h3>tom leakder</h3>
+                          <p>london, uk </p>
+                          <ul class="reviews-rate">
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi adipisci fugit voluptatibus, quidem molestiae non asperiores harum quasi atque culpa, voluptas earum delectus ex? Rem fugiat </p>
+
+                  </div>
+              </div>
+              <div class="my-card">
+                  <div class="myCard-content">
+                    <div class="reviews-topContent">
+                        <div class="img-wraper"><img src="images/clients/c3.png" alt="author"></div>
+                        <div class="reviews-author">
+                          <h3>tom leakder</h3>
+                          <p>london, uk </p>
+                          <ul class="reviews-rate">
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi adipisci fugit voluptatibus, quidem molestiae non asperiores harum quasi atque culpa, voluptas earum delectus ex? Rem fugiat </p>
+
+                  </div>
+              </div>
+              <div class="my-card">
+                  <div class="myCard-content">
+                    <div class="reviews-topContent">
+                        <div class="img-wraper"><img src="images/clients/c3.png" alt="author"></div>
+                        <div class="reviews-author">
+                          <h3>tom leakder</h3>
+                          <p>london, uk </p>
+                          <ul class="reviews-rate">
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                            <li> <i class="bi bi-star-fill"></i></li>
+                          </ul>
+                          
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi adipisci fugit voluptatibus, quidem molestiae non asperiores harum quasi atque culpa, voluptas earum delectus ex? Rem fugiat </p>
+
+                  </div>
+              </div>
+            </div>
+
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

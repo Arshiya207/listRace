@@ -1,0 +1,32 @@
+@mixin selectBox($background, $border, $color, $cursor) {
+  background: $background;
+  border: $border;
+  color: $color;
+  cursor: $cursor;
+}
+@mixin card(
+  $width,
+  $padding,
+  $border,
+  $radius,
+  $box-shadow,
+  $backColor,
+  $trans,
+  $maxWidth
+) {
+  min-width: $width;
+  padding: $padding;
+  border: $border;
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+  background-color: $backColor;
+  transition: $trans;
+  max-width:$maxWidth ;
+}
+@mixin centerSecHeaders() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
